@@ -1,0 +1,132 @@
+/* font-family: 'Inter', sans-serif;
+   font-family: 'Lexend Deca', sans-serif;
+   
+   */
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+   }
+
+   :root{
+    --main-bg: hsl(233, 47%, 7%);
+    --card-bg:  hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-pg: hsla(0, 0%, 100%, 0.75);
+    --stats-hd: hsla(0, 0%, 100%, 0.6); 
+
+   }
+
+   
+  .container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .card{ 
+    width:70vw;
+    background-color: var(--card-bg);
+    border-radius: 7px;
+    display: flex;
+   
+
+  }
+
+  .card .desc{
+    width:50%;
+    padding: 4rem;
+  }
+
+  .card .card-img {
+    width: 50%;
+    border-radius: 0 7px 7px 0;
+    background: linear-gradient(
+      0deg, 
+      hsla(277, 80%, 39%, 0.6) 0%,
+      hsla(275, 92%, 26%, 0.6) 100%
+    ),
+    url(images/image-header-desktop.jpg);
+    background-size: cover;
+   
+
+  }
+
+  .card .desc h1, span{font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+
+  }
+
+  .card .desc span{
+    color:var(--accent)
+  }
+
+  .card .desc p{font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: small;
+    color: var(--main-pg);
+    margin: 30px 0 40px 0;
+    line-height: 18px;
+
+  }
+
+  .card .stats{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+.card .stats .number{
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card .stats .name{
+  text-transform: uppercase;
+  font-size: 9px;
+  color: var(--stats-hd);
+  letter-spacing: 1.5px;
+  line-height: 20px;
+
+}
+
+/* mobile responsiveness */
+@media (max-width:475px) {
+.card {flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 90vw;
+  height: 90vh;
+}
+
+.card .desc{
+  width: auto;
+  height: 70%;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.card .stats {
+  flex-direction: column;
+}
+
+.card .stats .companies,
+.card .stats .templaters {
+  margin-bottom: 2rem;
+}
+
+.card .card-img{
+  height: 30%;
+  width: 100%;
+  border-radius:7px 7px 0 0
+}
+}
