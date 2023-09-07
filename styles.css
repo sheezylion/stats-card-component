@@ -120,8 +120,8 @@
 }
 
 .card .stats .companies,
-.card .stats .templaters {
-  margin-bottom: 2rem;
+.card .stats .templates {
+  margin-bottom: 1.5rem;
 }
 
 .card .card-img{
